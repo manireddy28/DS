@@ -1,4 +1,4 @@
-include<stdio.h>
+#include<stdio.h>
 int main()
 {
 	int roll_no;
@@ -10,9 +10,9 @@ int main()
 	scanf("%d",&roll_no);
 	
 	printf("Enter Name: ");
-	scanf("%[^\n]",name);
+	scanf("%s",name);
 	
-	for (i=o;i<5;i++) {
+	for (i=0;i<5;i++) {
 		printf("Enter marks fo subject %d: ",i+1);
 		scanf("%d",&marks[i]);
 		total += marks[i];
@@ -20,11 +20,13 @@ int main()
 	printf("\n--- Students Details (Using Array) ---\n");
 	printf("Roll Number: %d\n",roll_no);
 	printf("Name: %s\n",name);
-	printf("Mrks: ");
+	printf("Marks: ");
 	for(i=0;i<5;i++)
 	{
 		printf("%d ",marks[i]);
 	}
 	printf("\nTotal: %d\n",total);
+	return 0;
 }
+
 
